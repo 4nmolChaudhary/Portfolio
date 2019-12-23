@@ -1,0 +1,57 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #intro{
+        .header{
+            a{
+                display: none;
+            }            
+        }
+        .intro-content{
+            z-index: 1;
+            .row{
+                @include displayFlex(column);
+                h5{
+                    @include kionaFont(24px);
+                }
+                h1{
+                    color: #FFFFFF;
+                    font-family: "poppins-bold", sans-serif;
+                    font-size: 54px;
+                    line-height: 0.75em;
+                    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                }
+                .intro-position{
+                    @include kionaFont(18px);
+                }
+                .button{
+                    @include kionaFont(22px);
+                    @include linkReset(#FFFFFF,'kiona',22px);
+                    padding: 15px 20px;
+                    border: 2px solid #FFFFFF;
+                    margin-top: 42px;
+                    &:hover{
+                        color: $primaryColor;
+                        background: $secondaryColor;
+                        border: 2px solid $secondaryColor;
+                    }
+                }
+    
+            }
+        }
+        .social{
+            z-index: 3;
+            position: relative;
+            top:25%;
+            i{
+                color:#fff;
+                font-size: 40px;
+                margin: 35px 25px 0px 25px;
+                &:hover{
+                    color:$secondaryColor;
+                }
+            }
+        }
+        background: #151515 url('../images/intro-bg.jpg') no-repeat center bottom;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
